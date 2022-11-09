@@ -1,5 +1,11 @@
 # Steafy
 Web App project
 
-test2
+test3
+
+
+
+install angular:
+
+npm install -g @angular/cli
 
