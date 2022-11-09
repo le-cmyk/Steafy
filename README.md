@@ -9,3 +9,5 @@ install angular:
 
 npm install -g @angular/cli
 
+test
+
