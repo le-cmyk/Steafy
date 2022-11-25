@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { HomeComponent } from './home/home.component';
 import { ConnectionComponent } from './connection/connection.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { ConnectionComponent } from './connection/connection.component';
     AppComponent,
     EquipeComponent,
     HomeComponent,
-    ConnectionComponent
+    ConnectionComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
