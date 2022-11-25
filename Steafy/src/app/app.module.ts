@@ -1,23 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
 import { EquipeComponent } from './equipe/equipe.component';
-
-const routes: Routes = [
-  {path:'home',component :AppComponent},
-];
-
+import { HomeComponent } from './home/home.component';
+import { ConnectionComponent } from './connection/connection.component';
 @NgModule({
-  imports:      [
+  declarations: [
+    AppComponent,
+    EquipeComponent,
+    HomeComponent,
+    ConnectionComponent
+  ],
+  imports: [
     BrowserModule,
-    FormsModule,
-    RouterModule.forRoot([
-/* . . . */
-    ])],
-  declarations: [ AppComponent, EquipeComponent ],
-  bootstrap:    [ AppComponent ]
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 
