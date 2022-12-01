@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var MatiereController = require('./matiere/MatiereController');
-app.use('/matieres', MatiereController);
+var MatiereController = require('./home/homeController');
+app.use('/home', MatiereController);
 
 module.exports = app;
