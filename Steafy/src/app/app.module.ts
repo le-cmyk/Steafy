@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ConnectionComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
