@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   public home: any; 
 
   constructor(
+    
     private httpClient : HttpClient
   ){}
 
@@ -20,9 +21,8 @@ export class HomeComponent implements OnInit {
   getMonitor(){
     this.httpClient.get<any>('http://localhost:3000/home').subscribe(
       response => {
-        console.log(response);
-        this.home = response;
         
+        this.home = response;
       }
     );
   }

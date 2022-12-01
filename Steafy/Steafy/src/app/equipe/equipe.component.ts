@@ -12,10 +12,21 @@ export class EquipeComponent implements OnInit {
 
   constructor(
     private httpClient : HttpClient
-  ){}
+  ){
+
+    console.log('test');
+  }
 
   ngOnInit(): void {
+    console.log("blabla")
     this.getMonitor();
+  }
+
+  onRefresh(): void {
+
+    console.log("On refresh")
+    this.getMonitor();
+
   }
 
 
