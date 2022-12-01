@@ -3,7 +3,6 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 router.use(bodyParser.json());
 var home = require('./home');
-
 router.get('/', function (req, res) {
     home.getmatieres(function(err,rows){
         if(err) {

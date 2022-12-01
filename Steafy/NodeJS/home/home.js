@@ -1,5 +1,4 @@
 var db = require('../db');
-
 var home = {
     getmatieres: function(callback)
     {
