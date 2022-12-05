@@ -1,85 +1,72 @@
-<section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
+<section class="h-100 gradient-custom" >
+    <div class="container py-5">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-4 col-lg-6 col-xl-5">
-          <div class="card bg-dark text-white" style="border-radius: 1rem;">
-            <div class="card-body p-3 text-center">
+          <div class="card bg-dark text-white" style="border-radius: 0.5rem;">
+            <div class="card-body pb-2 text-center">
               
-                  <div class="p-5">
-                    <h2 class="fw-bold mb-2 text">General Infomation</h2>
+                  <div class="p-1">
+                    <h2 class="fw-bold mb-4 text">General Infomation</h2>
                     
-                    <div class="mb-4 pb-2">
+                    <div class="mb-2 pb-2">
                       <select class="select">
-                        <option value="1">Manager</option>
-                        <option value="2">Employe</option>
+                        <option value="form_Manager">Manager</option>
+                        <option value="form_Moniteur">Moniteur</option>
                       </select>
                     </div>
   
                     <div class="row">
-                      <div class="col-md-6 mb-4 pb-2">
+                      <div class="col-md-6 mb-2 pb-2">
   
                         <div class="form-outline">
-                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" />
-                          <label class="form-label" for="form3Examplev2">First name</label>
+                          <input type="text" id="form_Prenom" class="form-control form-control-lg" />
+                          <label class="form-label" for="form_Prenom">First name</label>
                         </div>
   
                       </div>
-                      <div class="col-md-6 mb-4 pb-2">
+                      <div class="col-md-6 mb-2 pb-2">
   
                         <div class="form-outline">
-                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" />
-                          <label class="form-label" for="form3Examplev3">Last name</label>
+                          <input type="text" id="form_Nom" class="form-control form-control-lg" />
+                          <label class="form-label" for="form_Nom">Last name</label>
                         </div>
   
                       </div>
                     </div>
-  
-                    <div class="mb-4 pb-2">
-                      <select class="select">
-                        <option value="1">Position</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                      </select>
-                    </div>
-  
-                    <div class="mb-4 pb-2">
+
+                    <div class="mb-2 pb-2">
                       <div class="form-outline">
-                        <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplev4">Phone Number</label>
+                        <input type="text" id="form_Telephone" class="form-control form-control-lg" />
+                        <label class="form-label" for="form_Telephone">Phone Number</label>
                       </div>
                     </div>
   
-                    <div class="row">
-                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-  
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev5" class="form-control form-control-lg" />
-                          <label class="form-label" for="form3Examplev5">Bussines Arena</label>
-                        </div>
-  
+                    
+                    <div class="mb-2 pb-2">
+
+                      <div class="form-outline">
+                        <input type="text" id="form_Email" class="form-control form-control-lg" />
+                        <label class="form-label" for="form_Email">Email</label>
                       </div>
-                      <div class="col-md-6">
-  
-                        <select class="select">
-                          <option value="1">Employees</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                          <option value="4">Four</option>
-                        </select>
-  
-                      </div>
-                      <div class="form-check d-flex justify-content-start mb-4 pb-3">
-                        <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
-                        <label class="form-check-label text-white" for="form2Example3">
-                          I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
-                          site.
-                        </label>
-                      </div>
-    
-                      <button type="button" class="btn btn-light btn-lg"
-                        data-mdb-ripple-color="dark">Register</button>
+
                     </div>
+
+                    <div class="form-outline form-white mb-2 pb-2">
+                      <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                      <label class="form-label" for="typePasswordX">Password</label>
+                    </div>
+
+                    <div class="form-check d-flex justify-content-start mb-2 pb-2">
+                      <input class="form-check-input me-3" type="checkbox" value="" id="form_checkbox" />
+                      <label class="form-check-label text-white" for="form_checkbox">
+                        I do accept the <a class="text-white"><u>Terms and Conditions</u></a> of your
+                        site.
+                      </label>
+                    </div>
+  
+                    <button onclick="location.href = '#!';" type="button" class="btn btn-light btn-lg"
+                      data-mdb-ripple-color="dark">Register</button>
+                  
   
                   </div>
                
