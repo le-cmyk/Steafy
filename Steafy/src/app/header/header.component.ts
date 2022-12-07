@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public a: any; 
+
+  constructor(
+    private httpClient : HttpClient
+  ){}
 
   ngOnInit(): void {
+    this.getMonitor();
+  }
+
+
+  getMonitor(){
+    this.httpClient.get<any>('http://localhost:3000/home').subscribe(
+      response => {
+        console.log(response);
+        this.a = response;
+    });
   }
 
 }

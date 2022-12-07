@@ -3,6 +3,6 @@ var connection = mysql.createPool({
     host     : 'localhost',
     user     : 'root',
     password : 'root',
-    database : 'bd_notes'
+    database : 'steafydb'
 });
 module.exports=connection;
