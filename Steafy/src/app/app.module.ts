@@ -10,6 +10,11 @@ import { ConnectionComponent } from './connection/connection.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
+<<<<<<< HEAD
+=======
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+
+>>>>>>> 2fec1193daf07754fcddf4d8a724aa6a5ca0488c
 
 @NgModule({
   declarations: [
@@ -18,7 +23,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http'
     HomeComponent,
     ConnectionComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
