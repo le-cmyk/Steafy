@@ -56,7 +56,6 @@ export class ScoreMoniteurComponent implements OnInit {
         this.Moniteur[i].score = Number(this.Score)
         this.httpClient.put<any>('http://localhost:3000/home/' + this.Moniteur[i].idMoniteur, this.Moniteur[i] ).subscribe(
           response => {
-            
           }
         );
       }

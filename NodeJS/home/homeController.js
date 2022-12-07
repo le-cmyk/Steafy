@@ -28,6 +28,54 @@ router.get('/', function (req, res) {
     });
 });
 
+router.get('/rdv', function (req, res) {
+    home.getrdv(function(err,rows){
+        if(err) {
+            res.status(400).json(err);
+        }
+        else
+        {
+            res.json(rows);
+        }
+    });
+});
+
+router.get('/client', function (req, res) {
+    home.getClient(function(err,rows){
+        if(err) {
+            res.status(400).json(err);
+        }
+        else
+        {
+            res.json(rows);
+        }
+    });
+});
+
+router.post('/client/client.json', function (req, res) {
+    home.postClient(req.body,function(err,rows){
+        if(err) {
+            res.status(400).json(err);
+        }
+        else
+        {
+            res.json(rows);
+        }
+    });
+});
+
+router.post('/rdv/rdv.json', function (req, res) {
+    home.postrdv(req.body,function(err,rows){
+        if(err) {
+            res.status(400).json(err);
+        }
+        else
+        {
+            res.json(rows);
+        }
+    });
+});
+
 router.put("/:id", (req, res) => {
     console.log('PUT request received...');
     home.updatematiere(req.body,function(err,rows){

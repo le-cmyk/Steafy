@@ -1,1 +1,63 @@
-<p>client works!</p>
+<div class="jumbotron" style="background-color: #fff; height: calc(95vh);">
+    
+    <p> </p>
+    <h1>
+      Page : {{title}}
+    </h1>
+    <form [formGroup]="angForm" novalidate>
+          <div class="form-group">
+              <label>Jour RDV:</label>
+              <input class="form-control" formControlName="jourrdv" type="date">
+          </div>
+          <div *ngIf="angForm.controls['jourrdv'].invalid && (angForm.controls['jourrdv'].dirty || angForm.controls['jourrdv'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['jourrdv'].errors?.required">
+                jourrdv is required.
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label>Nom:</label>
+            <input class="form-control" formControlName="name" type="text">
+          </div>
+        <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['name'].errors?.required">
+              Name is required.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Prenom:</label>
+            <input class="form-control" formControlName="prenom" type="text">
+        </div>
+        <div *ngIf="angForm.controls['prenom'].invalid && (angForm.controls['prenom'].dirty || angForm.controls['prenom'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['prenom'].errors?.required">
+              prenom is required.
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>telephone:</label>
+            <input class="form-control" formControlName="telephone" type="text">
+        </div>
+        <div *ngIf="angForm.controls['telephone'].invalid && (angForm.controls['telephone'].dirty || angForm.controls['telephone'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['telephone'].errors?.required">
+              Name is required.
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Email:</label>
+            <input class="form-control" formControlName="email" type="text">
+        </div>
+        <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['email'].errors?.required">
+              Name is required.
+            </div>
+        </div>
+        <button type="button" (click)="clickme()">Clickme</button>   
+    </form>
+    <br />
+    <p>Form value: {{ angForm.value | json }}</p>
+    <p>Form status: {{ angForm.status | json }}</p>
+  </div>
