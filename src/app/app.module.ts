@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ScoreMoniteurComponent } from './score-moniteur/score-moniteur.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ConnectionComponent,
     HeaderComponent,
     FooterComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    ScoreMoniteurComponent
   ],
   imports: [
     BrowserModule,
