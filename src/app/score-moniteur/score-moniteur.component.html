@@ -1,6 +1,6 @@
 <div class="jumbotron" style="background-color: #fff; height: calc(95vh);">
     
-    <p>{{this.home[1].IdMoniteur}}</p>
+    <p>{{this.Moniteur[1].idMoniteur}}</p>
     <h1>
       Page : {{title}}
     </h1>
@@ -23,10 +23,7 @@
                 email is required.
               </div>
           </div>
-          <button type="submit"
-              [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
-              Save
-          </button>
+          <button type="button" (click)="clickme()">Clickme</button>
     </form>
     <br />
     <p>Form value: {{ angForm.value | json }}</p>

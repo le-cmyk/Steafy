@@ -8,9 +8,11 @@ import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
   styleUrls: ['./score-moniteur.component.css']
 })
 export class ScoreMoniteurComponent implements OnInit {
-
+  Idmoniteur: string = "";
+  Score: string = "";
+  a: string;
   public tags: any;
-  public home: any; 
+  public Moniteur: any; 
   title = 'Changement Scores';
    angForm: FormGroup;
   constructor(
@@ -25,9 +27,9 @@ export class ScoreMoniteurComponent implements OnInit {
   getMonitor(){
     this.httpClient.get<any>('http://localhost:3000/home').subscribe(
       response => {
-        console.log()
-        this.home = response;
-       
+        this.Moniteur = response;
+        
+        console.log(this.Moniteur)
       }
     );
   }
@@ -37,6 +39,28 @@ export class ScoreMoniteurComponent implements OnInit {
        name: ['', Validators.required ],
        address: ['', Validators.required ],
     });
+  }
+  clickme() {
+
+    var count = Object.keys(this.Moniteur).length;
+    this.Idmoniteur=this.angForm.get('name')?.value;
+    this.Score=this.angForm.get('address')?.value;
+    console.log(this.Idmoniteur)
+    console.log(this.Score)
+
+    for (let i = 0; i < count; i++) {
+      
+      if(Number(this.Idmoniteur) == Number(this.Moniteur[i].IdMoniteur))
+      {
+        console.log(this.Moniteur[i].idMoniteur)
+        console.log("Moniteur existe dans la DB")
+      }
+      else
+      {
+        console.log(this.Moniteur[i].idMoniteur)
+        console.log("ERROR : Moniteur n'existe pas ")
+      }
+    }
   }
 
 }
