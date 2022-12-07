@@ -11,6 +11,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScoreMoniteurComponent } from './score-moniteur/score-moniteur.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { ScoreMoniteurComponent } from './score-moniteur/score-moniteur.componen
     HeaderComponent,
     FooterComponent,
     RegistrationFormComponent,
-    ScoreMoniteurComponent
+    ScoreMoniteurComponent,
+    CalendrierComponent
   ],
   imports: [
     BrowserModule,

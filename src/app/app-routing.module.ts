@@ -6,12 +6,15 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { ScoreMoniteurComponent } from './score-moniteur/score-moniteur.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
+
 const routes: Routes = [
     {path:'home',component :HomeComponent},
     {path:'equipe',component :EquipeComponent},
     {path:'Connection',component :ConnectionComponent},
     {path: 'RegistrationForm',component:RegistrationFormComponent},
-    {path: 'Score_moniteur',component:ScoreMoniteurComponent}
+    {path: 'Score_moniteur',component:ScoreMoniteurComponent},
+    {path: 'Calendrier',component:CalendrierComponent}
 ];
 
 @NgModule({
