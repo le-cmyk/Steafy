@@ -45,21 +45,22 @@ export class ScoreMoniteurComponent implements OnInit {
     var count = Object.keys(this.Moniteur).length;
     this.Idmoniteur=this.angForm.get('name')?.value;
     this.Score=this.angForm.get('address')?.value;
-    console.log(this.Idmoniteur)
-    console.log(this.Score)
+    var a =1;
 
     for (let i = 0; i < count; i++) {
-      
-      if(Number(this.Idmoniteur) == Number(this.Moniteur[i].IdMoniteur))
+      if(this.Idmoniteur == this.Moniteur[i].idMoniteur)
       {
         console.log(this.Moniteur[i].idMoniteur)
         console.log("Moniteur existe dans la DB")
+        a = 0;
       }
       else
       {
-        console.log(this.Moniteur[i].idMoniteur)
-        console.log("ERROR : Moniteur n'existe pas ")
       }
+    }
+    if(a !=0)
+    {
+      console.log("Moniteur n'existe pas dans la db")
     }
   }
 
