@@ -12,6 +12,7 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScoreMoniteurComponent } from './score-moniteur/score-moniteur.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
+import { ClientComponent } from './client/client.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { CalendrierComponent } from './calendrier/calendrier.component';
     FooterComponent,
     RegistrationFormComponent,
     ScoreMoniteurComponent,
-    CalendrierComponent
+    CalendrierComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,

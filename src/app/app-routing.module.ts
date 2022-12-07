@@ -7,6 +7,8 @@ import { ConnectionComponent } from './connection/connection.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { ScoreMoniteurComponent } from './score-moniteur/score-moniteur.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
+import { ClientComponent } from './client/client.component';
+
 
 const routes: Routes = [
     {path:'home',component :HomeComponent},
@@ -14,7 +16,8 @@ const routes: Routes = [
     {path:'Connection',component :ConnectionComponent},
     {path: 'RegistrationForm',component:RegistrationFormComponent},
     {path: 'Score_moniteur',component:ScoreMoniteurComponent},
-    {path: 'Calendrier',component:CalendrierComponent}
+    {path: 'Calendrier',component:CalendrierComponent},
+    {path: 'Client',component:ClientComponent}
 ];
 
 @NgModule({
