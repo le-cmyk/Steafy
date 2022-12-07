@@ -3,6 +3,19 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 router.use(bodyParser.json());
 var home = require('./home');
+
+//router.put("/:id", (req, res) => {
+  //  console.log('PUT request received...');
+    //getConnection().query("UPDATE Moniteur SET Score = ? WHERE ID = ?", [req.body.Score, req.body.id],     
+    //(err, result) => {
+      //  if(err){
+        //    console.log(err.message);
+          //  throw err;
+        //}
+        //res.send(201, req.body); 
+    //});
+//});
+
 router.get('/', function (req, res) {
     home.getmatieres(function(err,rows){
         if(err) {
@@ -14,6 +27,22 @@ router.get('/', function (req, res) {
         }
     });
 });
+
+router.put("/:id", (req, res) => {
+    console.log('PUT request received...');
+    home.updatematiere(req.body,function(err,rows){
+        if(err) {
+            res.status(400).json(err);
+        }
+        else
+        {
+            res.json(rows);
+        }
+    });
+});
+
+
+
 
 //router.post('/', function (req, res) {
   //  Matiere.creatematiere(req.body,function(err,count){

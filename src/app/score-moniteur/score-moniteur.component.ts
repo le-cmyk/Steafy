@@ -50,9 +50,15 @@ export class ScoreMoniteurComponent implements OnInit {
     for (let i = 0; i < count; i++) {
       if(this.Idmoniteur == this.Moniteur[i].idMoniteur)
       {
+        var a = 0;
         console.log(this.Moniteur[i].idMoniteur)
         console.log("Moniteur existe dans la DB")
-        a = 0;
+        this.Moniteur[i].score = Number(this.Score)
+        this.httpClient.put<any>('http://localhost:3000/home/' + this.Moniteur[i].idMoniteur, this.Moniteur[i] ).subscribe(
+          response => {
+            
+          }
+        );
       }
       else
       {
