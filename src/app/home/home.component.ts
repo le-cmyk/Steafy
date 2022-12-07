@@ -12,7 +12,7 @@ import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 export class HomeComponent implements OnInit {
   public tags: any;
   public home: any; 
-  title = 'Changement Score';
+  title = 'Changement Scores';
    angForm: FormGroup;
   constructor(
     public httpClient : HttpClient,
